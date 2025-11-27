@@ -1,20 +1,14 @@
-"""Tennis Elo System Shenanigans."""
-import os
-os.environ['KAGGLEHUB_CACHE'] = r'C:\Users\silvi\Documents\TennisELO\TennisEloSystemShenanigans\Datasets'
-import kagglehub
-from kagglehub import KaggleDatasetAdapter
-
-def download_Dataset():
-    """Download the tennis dataset."""
-    path = kagglehub.dataset_download("dissfya/atp-tennis-2000-2023daily-pull")
-    return path
-
+#Tennis Elo System Shenanigans.
+# Using The GOAT Jeff Sackmann's Tennis Dataset
+# Need to go get 2025 data
+def loadJeffsData() -> None:
+    pass
 
 def main() -> None:
     print("Tennis Elo System is running.")
-    print("Downloading Dataset.")
-    download_Dataset()
-    print("Dataset Downloaded.")
+    print("Downloading Matches Dataset.")
+    matchdata = loadJeffsData()
+    print("Matches Dataset Downloaded.")
 
 if __name__ == "__main__":
     main()
